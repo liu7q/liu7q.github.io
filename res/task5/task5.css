@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+span {
+    display: block;
+    line-height: 4.6rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.header {
+    flex: 0 0 auto;
+    display: inline-flex;
+    background-color: #5fc0cd;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.header div {
+    width: 10rem;
+    flex-grow: 1;
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.main {
+    margin-top: -1rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.m1 {
+    display: flex;
+    align-items: center;
+    background-image: url("bgimg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 20rem;
+}
+
+.m1 .woman {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 1.5rem;
+}
+
+.m1 p {
+    padding-left: 1.5rem;
+    background-image: url("Shape.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    line-height: 2.8rem;
+    background-position: 1.8rem 3.6rem;
+}
+
+.m2 {
+}
+
+.m2 hr {
+    margin: 0 1rem;
+    border-color: #e1e5e7;
+    opacity: 0.5;
+}
+
+.m2 li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.m2 li:nth-child(1) {
+    color: #333333;
+    background: 1rem no-repeat url("圆角矩形.png");
+    background-size: 0.2rem;
+    font: bold 1.5rem/4rem auto;
+    padding-left: 2rem;
+}
+
+.m2 li:nth-child(2) {
+    color: #333333;
+    background: 1rem no-repeat url("矩形.png");
+    background-size: 0.2rem;
+    font: bold 1.5rem auto;
+    padding-left: 2rem;
+}
+
+.m2 li span {
+    font: bold 1.5rem/4rem auto;
+    display: inline-flex;
+    align-items: center;
+    background: 0.5rem no-repeat url("形状.png");
+    background-size: 1.5rem;
+    margin-left: 2rem;
+    padding-left: 2.5rem;
+}
+
+.m2 li p {
+    margin-left: 2.5rem;
+    color: #999999;
+    font: 1.5rem/5rem auto;
+}
+
+.m2 li p:nth-child(1) {
+    min-width: 8rem;
+}
+
+.m2 li p:nth-child(2) {
+    margin-left: 1rem;
+    padding-left: 3rem;
+    color: #333333;
+    background: 1rem no-repeat url("矩形.png");
+}
+
+.footer {
+    height: 5rem;
+    margin: 1rem;
+    flex: 0 0 auto;
+    display: inline-flex;
+}
+
+.footer .f1 {
+    flex-grow: 1;
+    width: 5rem;
+    font-size: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    color: #5fc0cd;
+    border: 0.2rem solid #5fc0cd;
+    margin-right: 0.5rem;
+
+}
+
+.footer .f2 {
+    flex-grow: 1;
+    color: #5fc0cd;
+    width: 5rem;
+    font-size: 2rem;
+    background-color: #5fc0cd;
+    border-radius: 0.5rem;
+    color: #FFF;
+    border: 0.2rem solid #5fc0cd;
+    margin-left: 0.5rem;
+}
