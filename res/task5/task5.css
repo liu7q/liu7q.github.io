@@ -3,40 +3,48 @@
     padding: 0px;
 }
 
-span {
-    display: block;
-    line-height: 4.6rem;
-    text-align: center;
-    vertical-align: middle;
-}
 
 body {
-    flex-direction: column;
-    display: flex;
-    min-height: 100%;
-    max-height: 100%;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
 }
 
 .header {
-    flex: 0 0 auto;
-    display: inline-flex;
-    background-color: #5fc0cd;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
     height: 5rem;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 1rem;
+    line-height: 5rem;
+    background-color: #5fc0cd;
 }
 
 .header div {
     width: 10rem;
-    flex-grow: 1;
     color: #FFFFFF;
     font-size: 2rem;
 }
 
+.header div.left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 1.5rem;
+}
+
+.header div.center {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
 .main {
-    margin-top: -1rem;
-    flex: 1;
     overflow-y: auto;
 }
 
@@ -50,12 +58,36 @@ body {
     height: 20rem;
 }
 
+.m1 div{
+    width: 14rem;
+    height: 6rem;
+    margin-left: 1.5rem;
+}
+.m1 p:nth-child(1) {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    height: 3.5rem;
+    line-height: 3rem;
+
+}
+
+.m1 p:nth-child(2) {
+    color: #FFFFFF;
+    padding-left: 3rem;
+    background-image: url("Shape.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 0.2rem top;
+    font-size: 1.2rem;
+    height: 2.5rem;
+}
+
 .m1 .woman {
     width: 7rem;
     height: 7rem;
     margin-left: 1.5rem;
 }
-
+/*
 .m1 p {
     padding-left: 1.5rem;
     background-image: url("Shape.png");
@@ -66,14 +98,18 @@ body {
     line-height: 2.8rem;
     background-position: 1.8rem 3.6rem;
 }
-
+*/
 .m2 {
 }
 
 .m2 hr {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     border-color: #e1e5e7;
     opacity: 0.5;
+}
+
+.m2 ul {
+    list-style: none;
 }
 
 .m2 li {
@@ -82,25 +118,16 @@ body {
     justify-content: left;
 }
 
-.m2 li:nth-child(1) {
+.m2 li:nth-child(1){
+    margin-left: 1rem;
     color: #333333;
-    background: 1rem no-repeat url("圆角矩形.png");
-    background-size: 0.2rem;
-    font: bold 1.5rem/4rem auto;
-    padding-left: 2rem;
-}
-
-.m2 li:nth-child(2) {
-    color: #333333;
-    background: 1rem no-repeat url("矩形.png");
-    background-size: 0.2rem;
-    font: bold 1.5rem auto;
-    padding-left: 2rem;
+    font: bold 1.5rem/5rem auto;
 }
 
 .m2 li span {
-    font: bold 1.5rem/4rem auto;
-    display: inline-flex;
+    color: #333333;
+    font: bold 1.5rem/5rem auto;
+    display:flex;
     align-items: center;
     background: 0.5rem no-repeat url("形状.png");
     background-size: 1.5rem;
@@ -112,46 +139,68 @@ body {
     margin-left: 2.5rem;
     color: #999999;
     font: 1.5rem/5rem auto;
-}
-
-.m2 li p:nth-child(1) {
     min-width: 8rem;
 }
 
-.m2 li p:nth-child(2) {
-    margin-left: 1rem;
-    padding-left: 3rem;
+.m2 .mark-02 + p{
+    margin-left: 1.5rem;
     color: #333333;
-    background: 1rem no-repeat url("矩形.png");
 }
 
 .footer {
+    position: fixed;
+    background-color: #FFFFFF;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 5rem;
-    margin: 1rem;
-    flex: 0 0 auto;
-    display: inline-flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.footer .f1 {
-    flex-grow: 1;
-    width: 5rem;
+.footer ul {
+    list-style: none;
+    line-height: 4.6rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer li:nth-child(1) {
+    float: left;
     font-size: 2rem;
     background-color: #FFFFFF;
     border-radius: 0.5rem;
     color: #5fc0cd;
     border: 0.2rem solid #5fc0cd;
-    margin-right: 0.5rem;
-
+    margin-left: 1.5rem;
+    width: calc(50% - 1.5rem - 0.4rem - 0.75rem);
 }
 
-.footer .f2 {
-    flex-grow: 1;
+.footer li:nth-child(2) {
+    float: left;
     color: #5fc0cd;
-    width: 5rem;
     font-size: 2rem;
     background-color: #5fc0cd;
     border-radius: 0.5rem;
     color: #FFF;
     border: 0.2rem solid #5fc0cd;
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
+    width: calc(50% - 1.5rem - 0.4rem - 0.75rem);
+    margin-right: 1.5rem;
+}
+
+.mark-01 {
+    width: 0;
+    height: 0;
+    border: 0.8rem solid #5fc0cd;
+    border-right: 0.1rem none;
+    border-left-width: 0.3rem;
+}
+
+.mark-02 {
+    width: 0;
+    height: 0;
+    border: 1.5rem solid #e1e5e7;
+    border-right: 0.1rem none;
+    border-left-width: 0.15rem;
 }
