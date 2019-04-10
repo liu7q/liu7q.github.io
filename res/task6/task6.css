@@ -6,6 +6,8 @@
 body {
     margin-top: 5rem;
     margin-bottom: 6rem;
+    white-space: nowrap;
+
 }
 
 .header {
@@ -52,18 +54,21 @@ body {
 }
 
 .h_position {
-    position: fixed;
-    top: 0;
-    right: 1.5rem;
+    position: absolute;
+    top: 0; bottom: 0; right: 1.5rem;
+    margin: auto;
     font-size: 0;
+    background-image: url("t6_sprites.png");
+    height: 3rem;
+    width: 3rem;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    background-position-x: -10.5rem;
 }
 
-.h_position img {
-    width: 2rem;
-    vertical-align: middle;
-}
 
 main .up {
+    position: relative;
     width: 100%;
     height: 5rem;
     display: inline-flex;
@@ -71,6 +76,10 @@ main .up {
     align-items: center;
     justify-content: space-around;
 
+}
+
+.up ul {
+    list-style: none;
 }
 
 .up li {
@@ -83,6 +92,35 @@ main .up {
     color: #999;
 }
 
+
+
+.menu {
+    left: 0; top: 5rem; right: 0; bottom: 0;
+    margin: auto;
+    display: none;
+    position: absolute;
+    z-index: 9;
+}
+
+.menu p {
+    background-color: #afbac0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.menu p:hover {
+    background-color: #333333;
+}
+
+.dropmenu {
+    position: relative;
+}
+
+.dropmenu:hover .menu{
+    display: block;
+}
+
 hr {
     background-color: #e1e5e7;
     height: 1px;
@@ -91,55 +129,48 @@ hr {
 
 main .down {
     font-size: 1.5rem;
-}
 
+}
+main p , span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap
+}
 .down li {
+    position: relative;
     height: 10rem;
     line-height: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
-
 .down li p:nth-child(1) {
-    background-image: url("calendar.png");
-    background-size: 1.5rem;
-    background-position: left center;
-    padding-left: 2.5rem;
     margin-left: 1rem;
     background-repeat: no-repeat;
     text-align: left;
     color: #999;
+
 }
 
 .down li p:nth-child(2) {
-    flex-direction: row;
-    display: inline-flex;
-    padding-left: 2.5rem;
-    margin-left: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 3.5rem;right:40%;
+    margin: auto 0;
+    transform: translateY(-50%);
     text-align: left;
     color: #333;
-    justify-content: space-between;
 }
 
 .down li .right {
-    margin-right: 1rem;
-    text-align: right;
-    background-image: url("right_mark.png");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 1rem;
-    padding-right: 2.5rem;
-    color: #F00;
-}
+     position: absolute;
+     left: 60%;right:1.5rem;
+     text-align: right;
+     color: #F00;
+ }
 
-.down li p:nth-child(3) {
-    background-image: url("Shape.png");
-    background-size: 1.5rem;
-    background-position: left center;
-    padding-left: 2.5rem;
+.down li p:nth-child(4) {
     margin-left: 1rem;
-    background-repeat: no-repeat;
     text-align: left;
     color: #999;
 }
@@ -163,6 +194,38 @@ main .down {
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
+}
+
+.p_home {
+    background-image: url("t6_sprites.png");
+    height: 3rem;
+    width: 3rem;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    background-position-x: -17.6rem;
+}
+
+.p_write {
+    position: absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    margin: auto;
+    background-image: url("t6_sprites.png");
+    height: 2rem;
+    width: 2rem;
+    background-size: 14rem;
+    background-repeat: no-repeat;
+    background-position-x: -4.6rem;
+    background-position-y: -.3rem;
+}
+
+.p_people {
+    background-image: url("t6_sprites.png");
+    height: 3rem;
+    width: 3rem;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    background-position-x: -14rem;
 }
 
 .footer li:nth-child(1) {
@@ -173,12 +236,11 @@ main .down {
 }
 
 .footer li:nth-child(2) {
+    position: relative;
     width: 5rem;
     height: 5rem;
     border-radius: 5rem;
     background-color: #5fc0cd;
-    text-align: center;
-    vertical-align: middle;
 }
 
 .footer li:nth-child(3) {
@@ -197,6 +259,7 @@ main .down {
 }
 
 .mark {
+    position: relative;
     content: "";
     vertical-align: middle;
     font-size: 0;
@@ -204,4 +267,48 @@ main .down {
     border-top: .5rem solid #afbac0;
     border-right: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
+}
+
+
+.p_calendar {
+    background-image: url("t6_sprites.png");
+    margin: auto;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 2.5rem;
+    line-height: 3rem;
+    vertical-align: bottom;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    background-position-x: -4.3rem;
+    background-position-y: .3rem;
+    display: inline-block;
+}
+
+.p_point {
+    background-image: url("t6_sprites.png");
+    margin: auto;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 2.5rem;
+    line-height: 3rem;
+    vertical-align: bottom;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    background-position-x: -2rem;
+    background-position-y: .3rem;
+    display: inline-block;
+}
+
+.p_right{
+    background-image: url("t6_sprites.png");
+    margin: auto;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 2.5rem;
+    line-height: 3rem;
+    vertical-align: bottom;
+    background-size: 21rem;
+    background-repeat: no-repeat;
+    display: inline-block;
 }
